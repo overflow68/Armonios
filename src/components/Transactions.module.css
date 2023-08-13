@@ -1,0 +1,36 @@
+.container {
+    
+    padding: 10px;
+    max-width: 95%;
+    margin: 0 auto;
+    font-size: 2rem;
+    color: #ccc;
+  }
+  
+  .headerRow {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .headerCell {
+    flex-basis: 30%;
+  }
+  .transactionContainer {
+    max-height: 300px; /* Set your desired height */
+    overflow: auto;
+    
+  }
+  
+  .dataRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+  }
+  
+  .dataCell {
+    flex-basis: 30%;
+  }

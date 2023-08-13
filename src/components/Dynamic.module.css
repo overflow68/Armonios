@@ -1,0 +1,12 @@
+.dynamic{
+    background-color: #36454F;
+     width: 800px;
+     height: 400px;
+     margin: 10px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     color: #D3D3D3;
+     
+ }
+ 

@@ -1,0 +1,10 @@
+.cont{
+display: inline-block;
+text-align: center;
+font-size: 2rem;
+}
+
+.copyAlert{
+    font-size: 1rem;
+    color: rgb(135, 252, 135);
+}

@@ -1,0 +1,72 @@
+.container{
+   background-color: #36454F;
+   width: 550px;
+   height: 160px;
+   text-align: center;
+   padding: 20px;
+   color:#D3D3D3
+}
+
+
+.inputCont{
+    background-color: #708090;
+    width: 90%;
+    height: 40px;
+    margin: auto;
+    display:flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.address{
+    background-color: inherit;
+    width: 90%;
+    cursor: pointer;
+    text-align: left;
+    margin-left: 10px;
+    
+}
+
+.balanceSend{
+    display: flex;
+    height: 40px;
+    margin: auto;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px;
+    width: 90%;
+    font-size: 2rem;
+    margin-top: 30px;
+    
+}
+
+.balance{
+    display: flex;
+    align-items: center;
+    
+}
+
+.button {
+    border: none;
+    background-color: #D3D3D3;
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    
+    place-items: center;
+    color: #36454F;
+    font-size: 1.3rem;
+  }
+  .button:hover {
+    background-color: #acb9c4; /* Change background color on hover */
+    cursor: pointer; /* Change cursor to a pointer on hover */
+    /* Add any other styles you want for the hover effect */
+  }
+
+  .send{
+    display: flex;
+    justify-content: space-around;
+    flex: 0.9;
+    
+  }

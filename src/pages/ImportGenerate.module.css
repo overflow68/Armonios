@@ -1,0 +1,37 @@
+.import_generate{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
+    margin-top: 25vh;
+
+}
+
+.button{
+  border: none;
+  background-color: #36454F;
+  min-width: 300px;
+  min-height: 180px;
+  margin: 100px;
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+  color: #D3D3D3;
+  font-size: 1.6rem;
+  
+
+  
+  
+}
+.button:hover {
+  background-color: #52626F; /* Change background color on hover */
+  cursor: pointer; /* Change cursor to a pointer on hover */
+  /* Add any other styles you want for the hover effect */
+}
+
+
+.link{
+  margin: auto;
+  text-align: center;
+}

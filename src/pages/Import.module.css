@@ -1,0 +1,69 @@
+.import {
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+}
+
+.button {
+  border: none;
+  background-color: #36454F;
+  min-width: 200px;
+  min-height: 90px;
+  margin: 20px auto;
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+  color: #D3D3D3;
+  font-size: 1.6rem;
+}
+.button:hover {
+  background-color: #52626F; /* Change background color on hover */
+  cursor: pointer; /* Change cursor to a pointer on hover */
+  /* Add any other styles you want for the hover effect */
+}
+
+.container {
+  text-align: center;
+}
+
+.title {
+  padding: 10px;
+  color: #D3D3D3;
+  font-size: 1.6rem;
+}
+
+.text {
+  width: 400px;
+  height: 200px;
+  resize: none;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  /* Adjust .text width for smaller screens */
+  .text {
+    width: 90%;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Adjust .import, .button, and .title for smaller screens */
+  .import {
+    margin-top: 5vh;
+  }
+
+  .button {
+    min-width: 160px;
+    min-height: 70px;
+    font-size: 1.3rem;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  /* Adjust .text width for even smaller screens */
+  .text {
+    width: 100%;
+  }
+}

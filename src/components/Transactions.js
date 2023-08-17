@@ -1,10 +1,11 @@
 import React, { useEffect,useState } from 'react';
 import styles from './Transactions.module.css';
 import { useWallet } from '../contexts/walletContext';
-
+import { useDynamic } from '../contexts/DynamicContext';
  export default function Transactions() {
   const {getTxHistory} = useWallet()
   const [transactions,setTransactions] = useState([])
+  const {setElem} = useDynamic()
  
 
   function unixTimeToDate(unixTimestamp) {
@@ -15,6 +16,12 @@ import { useWallet } from '../contexts/walletContext';
     
     return `${day}-${month}-${year}`;
   }
+  const openTxDetails = (transaction)=>{
+    const{hash,time,inputs,out,fee} = transaction
+    
+setElem("OpenTx",{hash,time,inputs,out,fee})
+  }
+
   useEffect(()=>{
     
     const txs = async () =>{
@@ -39,7 +46,7 @@ import { useWallet } from '../contexts/walletContext';
           
 
           return (
-            <div key={index} className={styles.dataRow}>
+            <div onClick={()=> openTxDetails(transaction)} key={index} className={styles.dataRow}>
               <div  className={styles.dataCell}>{unixTimeToDate(time)}</div>
               <div className={styles.dataCell}>{result}</div>
               <div className={styles.dataCell}>{balance}</div>

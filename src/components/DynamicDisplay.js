@@ -2,6 +2,7 @@ import style from './Dynamic.module.css'
 import QrCode from '../components/QrCode';
 import SendTx from './SendTx';
 import { useDynamic } from '../contexts/DynamicContext';
+import Tx from './Tx'
 export default function DynamicDisplay(){
     const{element,values} = useDynamic()
     if(element === "Qrcode"){
@@ -13,7 +14,13 @@ export default function DynamicDisplay(){
         return(
         <div className={style.dynamic}><SendTx/></div>
         )
-    }else{
+    }
+    else if(element === "OpenTx"){
+        return(
+        <div className={style.dynamic}><Tx hash={values.hash} fee={values.fee} inputs={values.inputs} outputs={values.out} time ={values.time} /></div>
+        )
+    }
+    else{
         return(
             <div className={style.dynamic}>Empty</div>
         )

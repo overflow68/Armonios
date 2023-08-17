@@ -1,4 +1,11 @@
 .header{
     background-color: #36454F;
     padding: 8px;
+    
+}
+
+.bin{
+    float: right;
+    color: rgb(255, 103, 103);
+    cursor: pointer;
 }

@@ -19,6 +19,8 @@ export function DynamicProvider({children}){
         values
 
     }
+
+   
    
     return(
 <dynamicContext.Provider value={value}>

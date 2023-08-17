@@ -1,12 +1,23 @@
 
+import { useEffect } from 'react'
 import style from './ImportGenerate.module.css'
 import {FaSeedling} from 'react-icons/fa'
 import {LuImport} from 'react-icons/lu'
+import { useWallet } from '../contexts/walletContext'
 
-
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 
 export default function NewWallet(){
+    const {wallet,createWallet} = useWallet()
+    const navigate = useNavigate()
+    useEffect(()=>{
+        const mnemo = localStorage.getItem("seed")
+        if (mnemo){
+            createWallet(mnemo)
+            navigate("/")
+        }
+    
+    })
     
     
     return (

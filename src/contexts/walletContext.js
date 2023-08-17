@@ -1,6 +1,6 @@
 
 import { createContext,useContext,useEffect,useState } from "react";
-import { redirect } from "react-router-dom";
+
 
 const {Wallet,bip39}= require('./armoni.js')  
 
@@ -13,12 +13,13 @@ export const useWallet =()=>{
 
 export  function WalletProvider({children}){
     const[wallet,setWallet] = useState()
+    
    
 const createWallet=(seed)=>{
     const newWallet = new Wallet(seed)
     newWallet.generateAddresses(100,false)
     newWallet.generateAddresses(100,true)
-    
+    localStorage.setItem("seed",seed)
     setWallet(newWallet)
 }
 const getEmptyAddress = ()=>{
@@ -58,11 +59,6 @@ const value = {
 
 }
 
-useEffect(()=>{
-    if ( !wallet ){
-        redirect('/new-wallet')
-    }
-},[])
 
 return(
     <walletContext.Provider value ={value}>

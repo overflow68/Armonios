@@ -8,10 +8,9 @@ import { useWallet } from '../contexts/walletContext'
 export default function GenerateWallet(){
     let [seed,setSeed] = useState()
     let navigate = useNavigate();
-    const {createWallet,wallet} = useWallet()
+    const {createWallet} = useWallet()
     const createWalletAndRedir = ()=>{
         createWallet(seed.join(" "))
-        console.log(wallet)
         navigate('/')
     }
     

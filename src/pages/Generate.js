@@ -2,9 +2,10 @@
 import style from './Generate.module.css'
 import { useNavigate } from 'react-router-dom/dist'
 import { useState, useEffect } from 'react'
+import { useWallet } from '../contexts/walletContext'
 const bip39 = require('../contexts/armoni')
 
-import { useWallet } from '../contexts/walletContext'
+
 
 export default function GenerateWallet(){
     let [seed,setSeed] = useState()

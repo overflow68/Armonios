@@ -11,7 +11,7 @@ export default function SendTx(){
     const [amountUSD, setAmountUSD] = useState(0);
     const [feeRate, setFeeRate] = useState(10); // Default fee rate in sat/byte
     const [confScreen,setConfScreen] = useState(false)
-    const [isConfirmed, setIsConfirmed] = useState(false);
+    
     const {wallet} = useWallet()
 
   
@@ -33,9 +33,7 @@ export default function SendTx(){
       setAmountSatoshis(e.target.value);
     };
   
-    const handleFeeRateChange = (e) => {
-      setFeeRate(Number(e.target.value));
-    };
+   
   
     const handleSend = () => {
 
@@ -56,10 +54,7 @@ export default function SendTx(){
       setFeeRate(10);
     };
 
-  const handleConfirm = () => {
-    // Here you can implement the logic to confirm the transaction
-    setIsConfirmed(true);
-  };
+
     return (
       <>
       {!confScreen?<div className={styles.container}>

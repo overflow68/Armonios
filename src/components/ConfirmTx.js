@@ -16,7 +16,7 @@ export default function ConfirmTx({tx,receiver,sats}){
   const [isConfirmed,setConfirmed] = useState(false)
   const {wallet} = useWallet()
   const [hash,setHash] = useState("")
-  const [message,setMessage] = useState()
+
   
 
   const [isLoading,setLoading]=useState(true)

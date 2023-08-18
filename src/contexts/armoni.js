@@ -7389,7 +7389,6 @@ const { ECPairFactory } = require('ecpair')
 const bip32 = BIP32Factory(ecc)
 const bitcoin = require('bitcoinjs-lib')
 const assert = require('assert')
-
 function mergeArraysByHash(array1, array2) {
   const uniqueHashes = new Set(array1.map(item => item.hash));
   
@@ -7682,7 +7681,8 @@ psbt.addOutput({
 
   getEmptyChangeAddr(){
     for(let i=0;i<=this.activeAddresses.change.length;i++){
-      if (this.addressHistory[this.activeAddresses.change[i]] !== undefined){
+      if (this.addressHistory[this.activeAddresses.change[i]].length === 0){
+        console.log(this.addressHistory[this.activeAddresses.change[i]].length)
         return this.activeAddresses.change[i]
 
       }else{
@@ -7705,19 +7705,18 @@ myWallet.generateAddresses(10, true)
 
 async function stuff () {
   await myWallet.checkForTxs()
-  
+  console.log(myWallet.getEmptyChangeAddr())
 
   // myWallet.createTx('bc1qk8g8fszg8kz7ddq2xyudy4hf0x9mxfyvp5vj92', 40000)
 
 
-
-  console.log(myWallet.createTx('bc1qvxajzx22d9hhq50nrfv3nsfelnjxphq66uz0c8', 10000,52).jsonTx)
+console.log(myWallet)
+  //console.log(myWallet.createTx('bc1qvxajzx22d9hhq50nrfv3nsfelnjxphq66uz0c8', 25000,5).jsonTx)
  
   // console.log(myWallet.getHdData(myWallet.getInputData(25000))[0].bip32Derivation)
   //console.log(myWallet.getEmptyChangeAddr())
 }
-stuff()
-*/
+stuff()*/
 
 module.exports = {Wallet,bip39}
 

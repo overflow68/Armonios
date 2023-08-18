@@ -2,7 +2,7 @@
 import { createContext,useContext,useState } from "react";
 
 
-const {Wallet}= require('./armoni.js')  
+import {Wallet} from './armoni'
 
 
 const walletContext = createContext()
